@@ -1,0 +1,111 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #2563eb; }
+      .section-title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #1e40af; }
+      .step-number { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: white; }
+      .step-title { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #1e40af; }
+      .step-desc { font-family: Arial, sans-serif; font-size: 10px; fill: #374151; }
+      .conclusion { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #1e40af; }
+      .existing-box { fill: #f3f4f6; stroke: #2563eb; stroke-width: 2; rx: 8; }
+      .x402-box { fill: #2563eb; stroke: #1e40af; stroke-width: 2; rx: 8; }
+      .dashed-line { stroke: #9ca3af; stroke-width: 2; stroke-dasharray: 5,5; fill: none; }
+      .arrow { stroke: #2563eb; stroke-width: 2; fill: #2563eb; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f9fafb"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" class="title">AI 代理如何进行支付</text>
+  
+  <!-- Section Headers -->
+  <text x="200" y="80" text-anchor="middle" class="section-title">现有流程</text>
+  <text x="600" y="80" text-anchor="middle" class="section-title">使用 x402 的流程</text>
+  
+  <!-- Existing Process Steps -->
+  <!-- Step 1 -->
+  <rect x="50" y="100" width="300" height="60" class="existing-box"/>
+  <circle cx="70" cy="120" r="12" fill="#2563eb"/>
+  <text x="70" y="125" text-anchor="middle" class="step-number">1</text>
+  <text x="90" y="115" class="step-title">用户操作</text>
+  <text x="90" y="130" class="step-desc">使用新 API 提供商创建账户</text>
+  <text x="90" y="145" class="step-desc">（耗时的设置过程）</text>
+  
+  <!-- Step 2 -->
+  <rect x="50" y="180" width="300" height="60" class="existing-box"/>
+  <circle cx="70" cy="200" r="12" fill="#2563eb"/>
+  <text x="70" y="205" text-anchor="middle" class="step-number">2</text>
+  <text x="90" y="195" class="step-title">用户操作</text>
+  <text x="90" y="210" class="step-desc">向 API 提供商添加支付方式</text>
+  <text x="90" y="225" class="step-desc">（需要 KYC → 延迟访问，需要审批）</text>
+  
+  <!-- Step 3 -->
+  <rect x="50" y="260" width="300" height="60" class="existing-box"/>
+  <circle cx="70" cy="280" r="12" fill="#2563eb"/>
+  <text x="70" y="285" text-anchor="middle" class="step-number">3</text>
+  <text x="90" y="275" class="step-title">用户操作</text>
+  <text x="90" y="290" class="step-desc">购买积分/订阅</text>
+  <text x="90" y="305" class="step-desc">（预付承诺 → 超额支付或资金不足）</text>
+  
+  <!-- Step 4 -->
+  <rect x="50" y="340" width="300" height="60" class="existing-box"/>
+  <circle cx="70" cy="360" r="12" fill="#2563eb"/>
+  <text x="70" y="365" text-anchor="middle" class="step-number">4</text>
+  <text x="90" y="355" class="step-title">用户操作</text>
+  <text x="90" y="370" class="step-desc">管理 API 密钥（安全风险 →</text>
+  <text x="90" y="385" class="step-desc">必须存储和轮换密钥）</text>
+  
+  <!-- Step 5 -->
+  <rect x="50" y="420" width="300" height="60" class="existing-box"/>
+  <circle cx="70" cy="440" r="12" fill="#2563eb"/>
+  <text x="70" y="445" text-anchor="middle" class="step-number">5</text>
+  <text x="90" y="435" class="step-title">用户操作</text>
+  <text x="90" y="450" class="step-desc">进行支付（缓慢的交易，</text>
+  <text x="90" y="465" class="step-desc">退款，手续费）</text>
+  
+  <!-- x402 Process Steps -->
+  <!-- Step 1 -->
+  <rect x="450" y="100" width="300" height="60" class="x402-box"/>
+  <circle cx="470" cy="120" r="12" fill="white"/>
+  <text x="470" y="125" text-anchor="middle" style="fill: #2563eb; font-weight: bold; font-size: 14px;">1</text>
+  <text x="490" y="115" style="fill: white; font-weight: bold; font-size: 12px;">代理操作</text>
+  <text x="490" y="130" style="fill: white; font-size: 10px;">AI 代理发送 HTTP 请求</text>
+  <text x="490" y="145" style="fill: white; font-size: 10px;">并收到 402（需要支付）（无需账户设置，</text>
+  <text x="490" y="155" style="fill: white; font-size: 10px;">即时入门）</text>
+  
+  <!-- Step 2 -->
+  <rect x="450" y="180" width="300" height="60" class="x402-box"/>
+  <circle cx="470" cy="200" r="12" fill="white"/>
+  <text x="470" y="205" text-anchor="middle" style="fill: #2563eb; font-weight: bold; font-size: 14px;">2</text>
+  <text x="490" y="195" style="fill: white; font-weight: bold; font-size: 12px;">代理操作</text>
+  <text x="490" y="210" style="fill: white; font-size: 10px;">AI 代理使用稳定币无缝支付，</text>
+  <text x="490" y="225" style="fill: white; font-size: 10px;">无需注册或审批</text>
+  
+  <!-- Step 3 -->
+  <rect x="450" y="260" width="300" height="60" class="x402-box"/>
+  <circle cx="470" cy="280" r="12" fill="white"/>
+  <text x="470" y="285" text-anchor="middle" style="fill: #2563eb; font-weight: bold; font-size: 14px;">3</text>
+  <text x="490" y="275" style="fill: white; font-weight: bold; font-size: 12px;">代理操作</text>
+  <text x="490" y="290" style="fill: white; font-size: 10px;">获得 API 访问权限（无需手动</text>
+  <text x="490" y="305" style="fill: white; font-size: 10px;">审批，无需 API 密钥管理）</text>
+  
+  <!-- Dashed arrows connecting existing process steps -->
+  <path d="M 200 160 Q 200 170 200 180" class="dashed-line"/>
+  <path d="M 200 240 Q 200 250 200 260" class="dashed-line"/>
+  <path d="M 200 320 Q 200 330 200 340" class="dashed-line"/>
+  <path d="M 200 400 Q 200 410 200 420" class="dashed-line"/>
+  
+  <!-- Arrows connecting x402 process steps -->
+  <path d="M 600 160 L 600 180" class="arrow"/>
+  <polygon points="595,175 600,185 605,175" class="arrow"/>
+  
+  <path d="M 600 240 L 600 260" class="arrow"/>
+  <polygon points="595,255 600,265 605,255" class="arrow"/>
+  
+  <!-- Conclusion -->
+  <text x="600" y="380" text-anchor="middle" class="conclusion">x402 消除摩擦，允许 AI</text>
+  <text x="600" y="400" text-anchor="middle" class="conclusion">代理按使用付费，</text>
+  <text x="600" y="420" text-anchor="middle" class="conclusion">零手动步骤。</text>
+</svg>
